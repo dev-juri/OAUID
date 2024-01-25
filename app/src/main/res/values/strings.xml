@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">OAUID</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="oau_card_logo">OAU Card logo</string>
+    <string name="matric_no">Matric No</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="welcome">Welcome</string>
+    <string name="oluwafemi">Oluwafemi</string>
+    <string name="my_id">MY ID CARD</string>
+    <string name="quick_action">QUICK ACTIONS</string>
+    <string name="get_id_card">Get ID Card</string>
+    <string name="replace_id">Replace ID Card</string>
+    <string name="faq">FAQs</string>
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="settings">Settings</string>
+</resources>
