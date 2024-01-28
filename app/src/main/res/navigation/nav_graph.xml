@@ -27,5 +27,28 @@
         android:id="@+id/homeFragment"
         android:name="com.group16.oauid.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_replacementFragment"
+            app:destination="@id/replacementFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_getFragment"
+            app:destination="@id/getFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/replacementFragment"
+        android:name="com.group16.oauid.replacement.ReplacementFragment"
+        android:label="ReplacementFragment" >
+        <action
+            android:id="@+id/action_replacementFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getFragment"
+        android:name="com.group16.oauid.get.GetFragment"
+        android:label="GetFragment" />
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.group16.oauid.replacement.SuccessFragment"
+        android:label="SuccessFragment" />
 </navigation>
