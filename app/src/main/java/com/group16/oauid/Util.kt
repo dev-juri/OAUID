@@ -12,6 +12,18 @@ import androidx.lifecycle.Observer
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
+interface BottomNavFragment {
+    var showNavBar: Boolean
+}
+
+open class BottomNavTopLevelFragment : Fragment(), BottomNavFragment {
+    override var showNavBar: Boolean = true
+}
+
+open class BaseFragment : Fragment(), BottomNavFragment {
+    override var showNavBar: Boolean = false
+}
+
 inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
     crossinline bindingInflater: (LayoutInflater) -> T
 ) =

@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.group16.oauid.BaseFragment
 import com.group16.oauid.R
 import com.group16.oauid.databinding.FragmentLoginBinding
 import com.group16.oauid.viewBinding
 
-class LoginFragment : Fragment() {
+class LoginFragment : BaseFragment() {
 
     private val binding by viewBinding(FragmentLoginBinding::bind)
 
@@ -26,7 +26,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.signIn.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeActivity())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
         }
     }
 }

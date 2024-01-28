@@ -6,6 +6,7 @@
         <item name="statusBarBackground">@color/white</item>
         <item name="statusBarForeground">@color/colorBlack</item>
         <item name="android:fitsSystemWindows">true</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Theme.OAUID" parent="Base.Theme.OAUID" />
