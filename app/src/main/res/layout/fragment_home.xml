@@ -88,10 +88,12 @@
                 android:id="@+id/get_id"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
                 android:gravity="center"
                 app:cardBackgroundColor="@color/white"
-                app:layout_constraintEnd_toStartOf="@id/replce_id"
+                app:layout_constraintEnd_toStartOf="@id/replace_id"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:strokeColor="@color/colorGray">
@@ -115,10 +117,10 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/replce_id"
+                android:id="@+id/replace_id"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginEnd="16dp"
                 app:cardBackgroundColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@id/get_id"
@@ -146,16 +148,44 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/faq"
+                android:id="@+id/payment"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="16dp"
                 android:gravity="center"
                 android:layout_marginTop="16dp"
                 app:cardBackgroundColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/get_id"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/get_id"
                 app:layout_constraintTop_toBottomOf="@id/get_id"
+                app:strokeColor="@color/colorGray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/payment"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/payment"
+                        android:textSize="16sp"
+                        app:drawableTopCompat="@drawable/ic_temp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/faq"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/payment"
+                app:layout_constraintEnd_toEndOf="@id/replace_id"
+                app:layout_constraintStart_toStartOf="@id/replace_id"
+                app:layout_constraintTop_toTopOf="@id/payment"
                 app:strokeColor="@color/colorGray">
 
                 <LinearLayout

@@ -23,4 +23,6 @@
     <string name="payment_successful">PAYMENT SUCCESSFUL</string>
     <string name="click_to_print_your_card">Click to print your card.</string>
     <string name="print_your_card">Print Card</string>
+    <string name="close_page">Close Page</string>
+    <string name="payment">Payments</string>
 </resources>

@@ -26,7 +26,7 @@ class HomeFragment : BottomNavTopLevelFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.replceId.setOnClickListener {
+        binding.replaceId.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToReplacementFragment())
         }
 
