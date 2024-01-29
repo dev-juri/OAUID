@@ -25,4 +25,5 @@
     <string name="print_your_card">Print Card</string>
     <string name="close_page">Close Page</string>
     <string name="payment">Payments</string>
+    <string name="get_a_card">Get a Card</string>
 </resources>

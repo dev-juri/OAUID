@@ -112,7 +112,7 @@
                         android:fontFamily="@font/nunito_bold"
                         android:text="@string/get_id_card"
                         android:textSize="16sp"
-                        app:drawableTopCompat="@drawable/ic_temp" />
+                        app:drawableTopCompat="@drawable/ic_card" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -143,7 +143,7 @@
                         android:fontFamily="@font/nunito_bold"
                         android:text="@string/replace_id"
                         android:textSize="16sp"
-                        app:drawableTopCompat="@drawable/ic_temp" />
+                        app:drawableTopCompat="@drawable/ic_replace" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -173,7 +173,7 @@
                         android:fontFamily="@font/nunito_bold"
                         android:text="@string/payment"
                         android:textSize="16sp"
-                        app:drawableTopCompat="@drawable/ic_temp" />
+                        app:drawableTopCompat="@drawable/ic_payment" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

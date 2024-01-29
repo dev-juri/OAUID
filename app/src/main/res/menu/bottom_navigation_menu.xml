@@ -6,10 +6,10 @@
         android:title="@string/home" />
 
     <item android:id="@+id/notificationFragment"
-        android:icon="@drawable/ic_temp"
+        android:icon="@drawable/ic_notification"
         android:title="@string/notification" />
 
     <item android:id="@+id/settingsFragment"
-        android:icon="@drawable/ic_temp"
+        android:icon="@drawable/ic_settings"
         android:title="@string/settings" />
 </menu>
