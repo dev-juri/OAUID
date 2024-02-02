@@ -39,15 +39,20 @@ class LoginFragment : BaseFragment() {
                 ).show()
             } else {
                 val student =
-                    MainActivity.studentDatabase.find { it.matricNum == matricNo && it.password == password }
+                    MainActivity.studentDatabase.find { it.matricNum == matricNo }
                 if (student != null) {
-                    MainActivity.loggedIn = student
-                    findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
+                    if (student.password == password) {
+                        MainActivity.loggedIn = student
+                        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
+                    } else {
+                        Toast.makeText(requireContext(), "Incorrect password", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 } else {
                     Toast.makeText(
                         requireContext(),
                         "Student with the provided details isn't registered for the current session.",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_LONG
                     ).show()
                 }
             }
