@@ -46,7 +46,7 @@ class LoginFragment : BaseFragment() {
                 } else {
                     Toast.makeText(
                         requireContext(),
-                        "Matric Number or Password supplied is incorrect.",
+                        "Student with the provided details isn't registered for the current session.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

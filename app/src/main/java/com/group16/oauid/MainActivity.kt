@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
 
-        lateinit var loggedIn : Student
+        lateinit var loggedIn: Student
 
         val studentDatabase = arrayListOf(
             Student(
@@ -67,7 +67,8 @@ class MainActivity : AppCompatActivity() {
                 password = "qwerty",
                 faculty = "Technology",
                 department = "Computer Science & Engineering",
-                image = R.drawable.oau
+                image = R.drawable.oau,
+                numberIdGenerated = 0
             ),
             Student(
                 name = "Blessing Ese",
@@ -77,7 +78,8 @@ class MainActivity : AppCompatActivity() {
                 password = "blessing",
                 faculty = "Arts",
                 department = "Philosophy",
-                image = R.drawable.oau
+                image = R.drawable.oau,
+                numberIdGenerated = 0
             ),
             Student(
                 name = "Daniel Oshimen",
@@ -87,7 +89,8 @@ class MainActivity : AppCompatActivity() {
                 password = "dandan",
                 faculty = "Science",
                 department = "Mathematics",
-                image = R.drawable.oau
+                image = R.drawable.oau,
+                numberIdGenerated = 0
             )
         )
     }

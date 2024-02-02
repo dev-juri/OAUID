@@ -8,5 +8,6 @@ data class Student(
     var password: String,
     var faculty: String,
     var department: String,
-    var image: Int
+    var image: Int,
+    var numberIdGenerated: Int
 )
