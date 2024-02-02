@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.group16.oauid.data.Student
 import com.group16.oauid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -49,6 +51,44 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         (this as FragmentActivity).supportFragmentManager.unregisterFragmentLifecycleCallbacks(
             fragmentLifecycleCallbacks
+        )
+    }
+
+    companion object {
+
+        lateinit var loggedIn : Student
+
+        val studentDatabase = arrayListOf(
+            Student(
+                name = "Oluwafemi Ojuri",
+                matricNum = "CSC/2018/111",
+                sex = "Male",
+                level = 400,
+                password = "qwerty",
+                faculty = "Technology",
+                department = "Computer Science & Engineering",
+                image = R.drawable.oau
+            ),
+            Student(
+                name = "Blessing Ese",
+                matricNum = "PHL/2018/101",
+                sex = "Female",
+                level = 300,
+                password = "blessing",
+                faculty = "Arts",
+                department = "Philosophy",
+                image = R.drawable.oau
+            ),
+            Student(
+                name = "Daniel Oshimen",
+                matricNum = "MTH/2018/011",
+                sex = "Male",
+                level = 200,
+                password = "dandan",
+                faculty = "Science",
+                department = "Mathematics",
+                image = R.drawable.oau
+            )
         )
     }
 

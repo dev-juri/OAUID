@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.group16.oauid.BottomNavTopLevelFragment
+import com.group16.oauid.MainActivity
 import com.group16.oauid.R
 import com.group16.oauid.databinding.FragmentHomeBinding
 import com.group16.oauid.viewBinding
@@ -25,6 +26,8 @@ class HomeFragment : BottomNavTopLevelFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.name.text = MainActivity.loggedIn.name
 
         binding.replaceId.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToReplacementFragment())
