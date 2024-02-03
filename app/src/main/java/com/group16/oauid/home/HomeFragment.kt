@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.graphics.drawable.toDrawable
 import androidx.navigation.fragment.findNavController
 import com.group16.oauid.BottomNavTopLevelFragment
 import com.group16.oauid.MainActivity
@@ -26,14 +28,31 @@ class HomeFragment : BottomNavTopLevelFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.name.text = MainActivity.loggedIn.name
+        val student = MainActivity.loggedIn
+
+        binding.basicDetails.text = resources.getString(
+            R.string.basic_details,
+            student.name,
+            student.sex,
+            student.faculty,
+            student.department
+        )
+        binding.passport.setImageResource(student.image)
 
         binding.replaceId.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToReplacementFragment())
         }
 
         binding.getId.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToGetFragment())
+            if (student.numberIdGenerated > 0) {
+                Toast.makeText(
+                    requireContext(),
+                    "You have already generated an ID card this session, Click the Replace ID instead",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToGetFragment())
+            }
         }
     }
 }

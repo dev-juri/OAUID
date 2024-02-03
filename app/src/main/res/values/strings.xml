@@ -8,7 +8,7 @@
     <string name="sign_in">Sign In</string>
     <string name="welcome">Welcome</string>
     <string name="oluwafemi">Oluwafemi</string>
-    <string name="my_id">MY ID CARD</string>
+    <string name="my_id">MY ID CARD PREVIEW</string>
     <string name="quick_action">QUICK ACTIONS</string>
     <string name="get_id_card">Get ID Card</string>
     <string name="replace_id">Replace ID Card</string>
@@ -26,4 +26,16 @@
     <string name="close_page">Close Page</string>
     <string name="payment">Payments</string>
     <string name="get_a_card">Get a Card</string>
+    <string name="oau_logo">Oau Logo</string>
+    <string name="obafemi_awolowo_university">OBAFEMI AWOLOWO UNIVERSITY\nIle-Ife, Osun State</string>
+    <string name="basic_details"><![CDATA[Name: %s\nGender: %s\nFaculty: %s\nDepartment: %s]]></string>
+    <string name="id_text_back">1. This card remains the property of OBAFEMI AWOLOWO UNIVERSITY.\n2. This card is not transferable and must be produced if requested for by any officer of the University.\n3. No person(s) unless authorized by the University may hold or possess this card.\n4. This card must be returned to the University Registrar if found.\n5. This card must be submitted at Examinatiobs and Records Section on completion of your course or uopn termination of your studentship.\n6. The loss of this card must be reported immediately.</string>
+    <string name="obafemi_awolowo_university_nile_ife_nigeria">OBAFEMI AWOLOWO UNIVERSITY\nILE–IFE NIGERIA\nTEL (036) 230290–9\n<font color="#f60002">E-mail: registra@oauife.edu.ng</font></string>
+    <string name="id_card_name_matric">%s \n%s</string>
+    <string name="passport">passport</string>
+    <string name="dept_faculty"><font color="#f60002">%s</font> \n%s</string>
+    <string name="effective_2022_2023_session_part_4">Effective: 2022/2023 Session (Part 4)</string>
+    <string name="valid_till_30_12_2024"><font color="#f60002">VALID TILL</font> 30/12/2024</string>
+    <string name="bar_code">Bar code</string>
+    <string name="authorised_signature">AUTHORISED SIGNATURE</string>
 </resources>

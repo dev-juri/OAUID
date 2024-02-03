@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 password = "qwerty",
                 faculty = "Technology",
                 department = "Computer Science & Engineering",
-                image = R.drawable.oau,
+                image = R.drawable.femi,
                 numberIdGenerated = 0
             ),
             Student(
@@ -82,14 +82,14 @@ class MainActivity : AppCompatActivity() {
                 numberIdGenerated = 0
             ),
             Student(
-                name = "Daniel Oshimen",
+                name = "David Lartey",
                 matricNum = "MTH/2018/011",
                 sex = "Male",
                 level = 200,
-                password = "dandan",
-                faculty = "Science",
-                department = "Mathematics",
-                image = R.drawable.oau,
+                password = "lartey",
+                faculty = "Technology",
+                department = "Computer Science & Engineering",
+                image = R.drawable.lart,
                 numberIdGenerated = 0
             )
         )
