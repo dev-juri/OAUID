@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.group16.oauid.BaseFragment
 import com.group16.oauid.R
 import com.group16.oauid.databinding.FragmentSuccessBinding
@@ -25,8 +25,12 @@ class SuccessFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.back.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
         binding.print.setOnClickListener {
-            Toast.makeText(requireContext(), "Card Printing...", Toast.LENGTH_LONG).show()
+            findNavController().navigate(SuccessFragmentDirections.actionSuccessFragmentToGetFragment())
         }
     }
 }

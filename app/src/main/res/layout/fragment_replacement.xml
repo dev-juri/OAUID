@@ -25,8 +25,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
-                android:foreground="@color/white"
-                android:src="@drawable/ic_temp" />
+                android:src="@drawable/ic_back"
+                android:contentDescription="@string/back_button" />
 
             <TextView
                 android:layout_width="0dp"

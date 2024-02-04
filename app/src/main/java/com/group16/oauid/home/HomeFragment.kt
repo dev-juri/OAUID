@@ -1,11 +1,11 @@
 package com.group16.oauid.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.graphics.drawable.toDrawable
 import androidx.navigation.fragment.findNavController
 import com.group16.oauid.BottomNavTopLevelFragment
 import com.group16.oauid.MainActivity
@@ -28,8 +28,11 @@ class HomeFragment : BottomNavTopLevelFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+
         val student = MainActivity.loggedIn
 
+        binding.name.text = MainActivity.loggedIn.name.split(" ")[0]
         binding.basicDetails.text = resources.getString(
             R.string.basic_details,
             student.name,
@@ -44,7 +47,7 @@ class HomeFragment : BottomNavTopLevelFragment() {
         }
 
         binding.getId.setOnClickListener {
-            if (student.numberIdGenerated > 0) {
+            if (sharedPref.getBoolean(student.matricNum, false)) {
                 Toast.makeText(
                     requireContext(),
                     "You have already generated an ID card this session, Click the Replace ID instead",

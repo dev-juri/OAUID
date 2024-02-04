@@ -29,7 +29,7 @@
                 android:src="@drawable/ic_back"
                 android:contentDescription="@string/back_button" />
 
-            <TextView
+<!--            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -39,7 +39,7 @@
                 android:padding="16dp"
                 android:text="@string/get_a_card"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="18sp" />-->
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

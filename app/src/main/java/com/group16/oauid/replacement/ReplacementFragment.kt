@@ -10,7 +10,7 @@ import com.group16.oauid.R
 import com.group16.oauid.databinding.FragmentReplacementBinding
 import com.group16.oauid.viewBinding
 
-class ReplacementFragment: BaseFragment() {
+class ReplacementFragment : BaseFragment() {
 
     private val binding by viewBinding(FragmentReplacementBinding::bind)
     override fun onCreateView(
@@ -23,6 +23,10 @@ class ReplacementFragment: BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.backBtn.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
         binding.pay.setOnClickListener {
             findNavController().navigate(ReplacementFragmentDirections.actionReplacementFragmentToSuccessFragment())
