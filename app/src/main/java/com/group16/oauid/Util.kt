@@ -17,7 +17,7 @@ interface BottomNavFragment {
 }
 
 open class BottomNavTopLevelFragment : Fragment(), BottomNavFragment {
-    override var showNavBar: Boolean = true
+    override var showNavBar: Boolean = false
 }
 
 open class BaseFragment : Fragment(), BottomNavFragment {

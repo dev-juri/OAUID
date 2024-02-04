@@ -1,16 +1,13 @@
 package com.group16.oauid.get
 
 import android.content.Context
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.net.toUri
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.group16.oauid.BaseFragment
@@ -19,8 +16,6 @@ import com.group16.oauid.R
 import com.group16.oauid.createAndDownloadPdf
 import com.group16.oauid.databinding.FragmentGetBinding
 import com.group16.oauid.viewBinding
-import kotlinx.coroutines.runBlocking
-import java.io.File
 
 class GetFragment : BaseFragment() {
 
@@ -54,40 +49,40 @@ class GetFragment : BaseFragment() {
         }
 
         binding.print.setOnClickListener {
-                Toast.makeText(
-                    requireContext(),
-                    "Download in progress.",
-                    Toast.LENGTH_SHORT
-                ).show()
+            Toast.makeText(
+                requireContext(),
+                "Download in progress.",
+                Toast.LENGTH_SHORT
+            ).show()
 
-                val fileName = "${MainActivity.loggedIn.name}_ID_CARD.pdf"
+            val fileName = "${MainActivity.loggedIn.name}_ID_CARD.pdf"
 
-                with(sharedPref.edit()) {
-                    putBoolean(MainActivity.loggedIn.matricNum, true)
-                    apply()
-                }
+            with(sharedPref.edit()) {
+                putBoolean(MainActivity.loggedIn.matricNum, true)
+                apply()
+            }
 
-                createAndDownloadPdf(fileName, binding.idLayout)
+            createAndDownloadPdf(fileName, binding.idLayout)
 
-                Snackbar.make(
-                    binding.print,
-                    "$fileName downloaded.",
-                    Snackbar.LENGTH_INDEFINITE
-                )
-                    .setAction("Open") {
-                        it.setOnClickListener {
-                            val f = File(
-                                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-                                fileName
-                            )
+            Snackbar.make(
+                binding.print,
+                "$fileName downloaded and stored in the downloads folder.",
+                Snackbar.LENGTH_LONG
+            )
+                /*                    .setAction("Open") {
+                                        it.setOnClickListener {
+                                            val f = File(
+                                                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+                                                fileName
+                                            )
 
-                            val intent = Intent()
-                                .setData(f.absolutePath.toUri())
-                                .setAction(Intent.CATEGORY_APP_FILES)
-                            startActivity(intent)
-                        }
-                    }
-                    .show()
+                                            val intent = Intent()
+                                                .setData(f.path.toUri())
+                                                .setAction(Intent.CATEGORY_APP_FILES)
+                                            startActivity(intent)
+                                        }
+                                    }*/
+                .show()
         }
 
     }

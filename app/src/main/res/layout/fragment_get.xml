@@ -218,7 +218,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:text="@string/id_text_back"
-                        android:textSize="12sp" />
+                        android:textSize="11sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
